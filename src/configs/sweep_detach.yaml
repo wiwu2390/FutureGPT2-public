@@ -1,0 +1,28 @@
+method: grid
+metric:
+  goal: minimize
+  name: val_total_loss
+parameters:
+  k_self:
+    value: 0
+  k_future:
+    value: 0
+  k_kl:
+    value: 0
+  k_base:
+    value: 1
+  #base_lr:
+    #value: 5.0e-5
+  hidden_lb:
+    value: -1
+  token_lb:
+    value: -1
+  neck_cls:
+    value: 'mlp'
+  detach_attn:
+    values: [True, False]
+  lora_rank:
+    value: 128
+  hidden_idxs:
+    value: 32
+

@@ -1,0 +1,18 @@
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  hidden_lb:
+    value: 0
+  token_lb:
+    value: 0
+  hidden_idxs:
+    values: [11, 12]
+  neck_cls:
+    values: ["mlp", "lstm"]
+  pretrained:
+    values: [false, true]
+  dataset_name:
+    values: ["rand", "msmarco"]
+

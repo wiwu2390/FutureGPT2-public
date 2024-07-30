@@ -1,0 +1,19 @@
+#method: bayes
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  hidden_idxs,hidden_lb,token_lb,neck_cls:
+    values:
+      - "32,-1,0,mlp"
+      - "32,-1,0,lstm"
+      #- "31,0,-1,mlp"
+      #- "31,0,-1,lstm"
+      #- "32,0,0,mlp"
+      #- "32,0,0,lstm"
+      #- "31,0,0,mlp"
+      #- "31,0,0,lstm"
+  base_model_name:
+    values: ['daryl149/llama-2-7b-hf', 'daryl149/llama-2-7b-chat-hf']
+

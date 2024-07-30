@@ -1,0 +1,14 @@
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  lstm:
+    values: [false, true]
+  use_next:
+    values: [false, true]
+  future_loss:
+    values: [false, true]
+  depth:
+    values: [0, 1]
+

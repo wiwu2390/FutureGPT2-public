@@ -1,0 +1,17 @@
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  future_loss:
+    #values: [false, true]
+    value: false
+  base_lr:
+    value: 1e-5
+    #values: [1e-5, 5e-5, 1e-4, 4e-4]
+    #values: [1e-5, 5e-5]
+  kappa:
+    value: 1
+    #values: [0, 1e-5, 1e-4, 1e-3, 1e-2, 0.1, 1, 10]
+  hidden_idxs:
+    values: [10, 11, 12]

@@ -1,0 +1,8 @@
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  lam:
+    values: [0, 1e-3, 1e-2, 0.1, 1]
+

@@ -1,0 +1,26 @@
+method: grid
+metric:
+  goal: minimize
+  name: val_total_loss
+parameters:
+  k_self:
+    value: 1
+  k_future:
+    value: 0
+  k_kl:
+    value: 0
+  k_base:
+    value: 0
+  hidden_lb:
+    value: 0
+  token_lb:
+    value: 0
+  neck_cls:
+    value: 'mlp'
+  hidden_idxs:
+    value: 31
+  base_ckpt:
+    values:
+      - '/workspace/checkpoints/MISTRAL-DETACH-FINETUNE_20240209-061114-e6BC2_detach_attn-1_hidden_idxs-32_hidden_lb--1_k_base-1_k_future-0_k_kl-0_k_self-0_lora_rank-128_neck_cls-mlp_token_lb--1_epoch=00-val_self_loss=10.37.ckpt'
+      - '/workspace/checkpoints/MISTRAL-DETACH-FINETUNE_20240209-075114-FbCD0_detach_attn-0_hidden_idxs-32_hidden_lb--1_k_base-1_k_future-0_k_kl-0_k_self-0_lora_rank-128_neck_cls-mlp_token_lb--1_epoch=00-val_self_loss=10.37.ckpt'
+

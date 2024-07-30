@@ -1,0 +1,31 @@
+#method: bayes
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  hidden_idxs,hidden_lb,token_lb,neck_cls:
+    values:
+      - "0,-1,-1,mlp"
+      - "0,-1,0,mlp"
+      - "0,-1,1,mlp"
+      - "0,-1,0,lstm"
+      - "11,0,-1,mlp"
+      - "11,0,0,mlp"
+      - "11,0,1,mlp"
+      - "11,0,-1,lstm"
+      - "11,0,0,lstm"
+      - "12,0,-1,mlp"
+      - "12,0,0,mlp"
+      - "12,0,1,mlp"
+      - "12,0,-1,lstm"
+      - "12,0,0,lstm"
+  #hidden_idxs:
+    #values: [11, 12]
+  #hidden_lb:
+    #values: [-1, 0]
+  #token_lb:
+    #values: [-1, 0, 1]
+  #neck_cls:
+    #values: ['mlp', 'lstm']
+

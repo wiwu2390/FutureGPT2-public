@@ -1,0 +1,12 @@
+.*
+!/.gitignore
+scratch*.ipynb
+Untitled*.ipynb
+__pycache__
+corpus
+checkpoints
+wandb
+LAISR_FutureGPT2
+nohup*
+*.old
+SVD

@@ -1,0 +1,28 @@
+#method: bayes
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  hidden_idxs:
+    value: 12
+  hidden_lb:
+    value: 0
+  token_lb:
+    value: 0
+  neck_cls:
+    value: 'lstm'
+  gru:
+    value: true
+    #values: [true, false]
+  add_linear:
+    #values: [true, false]
+    value: true
+  neck_size:
+    value: 768
+  #add_linear,neck_size:
+    #values:
+      #- "0,768"
+      #- "1,768"
+      #- "1,512"
+      #- "1,256"

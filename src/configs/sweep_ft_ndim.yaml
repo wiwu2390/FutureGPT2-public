@@ -1,0 +1,19 @@
+#method: bayes
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  hidden_idxs:
+    values: [11, 12]
+  hidden_lb:
+    value: 0
+  token_lb:
+    value: 0
+  neck_cls:
+    value: mlp
+  layer_dims:
+    values: [256, 512, 768, 1024, 4096]
+  kappa:
+    value: 1
+

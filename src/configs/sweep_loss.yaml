@@ -1,0 +1,16 @@
+#method: bayes
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  hidden_idxs:
+    value: 12
+  hidden_lb:
+    value: 0
+  token_lb:
+    value: 0
+  neck_cls:
+    value: mlp
+  future_loss:
+    values: [false, true]

@@ -1,0 +1,31 @@
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  hidden_lb:
+    value: 0
+  token_lb:
+    value: 0
+  neck_cls:
+    #values: ["mlp", "lstm"]
+    value: "mlp"
+  dataset_name:
+    values:
+      - "rand"
+      - "ArXiv"
+      - "Enron Emails"
+      - "FreeLaw"
+      - "HackerNews"
+      - "Github"
+      - "OpenWebText2"
+      - "OpenSubtitles"
+      - "PubMed Abstracts"
+      - "UPSTO Backgrounds"
+      - "EuroParl"
+      - "StackExchange"
+      - "Wikipedia (en)"
+      - "YoutubeSubtitles"
+  hidden_idxs:
+    #values: [31, 32]
+    value: 31

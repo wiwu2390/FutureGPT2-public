@@ -1,0 +1,44 @@
+#method: bayes
+method: grid
+metric:
+  goal: minimize
+  name: val_self_loss
+parameters:
+  # OPTIM
+  lr_scheduler_name:
+    value: constant_with_warmup
+  neck_lr:
+    #distribution: log_uniform_values
+    value: 4e-4
+    #distribution: uniform
+    #min: 5e-6
+    #max: 5e-3
+  num_warmup_steps:
+    value: 1000
+    #distribution: q_log_uniform_values
+    #min: 500
+    #max: 20000
+  num_restarts:
+    value: 0
+    #distribution: int_uniform
+    #min: 5
+    #max: 30
+
+  # NECK
+  depth:
+    #values: [1, 6, 12]
+    value: 1
+  #layer_dims:
+    #value: [512]
+  #depth:
+    #distribution: int_uniform
+    #min: 1
+    #max: 13
+  layer_dims:
+    distribution: categorical
+    #values: [[], [128], [256], [512]]
+    values: [1, 4, 16, 64, 256, 1024, 4096, 16384]
+  use_next:
+    value: "True"
+
+program: sweep_MLP_neck.py
